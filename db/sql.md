@@ -18,7 +18,7 @@
  > 创建表格
  ```
     CREATE TABLE info (
-        id INT PRIMARY KEY,
+        id INT PRIMARY KEY auto_increment, // 主键自增
         title VARCHAR(128) NOT NULL,
         contentPath VARCHAR(128) NOT NULL, -- 内容path
         fabulous INT DEFAULT 0, -- 点赞数
@@ -26,4 +26,14 @@
         createDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP, -- 创建时间，默认当前时间
         FOREIGN KEY(userId) REFERENCES userInfo(id) -- 外键约束
     );
+ ```
+ 
+ > 查询
+ ```
+    SELECT * FROM info
+ ```
+ 
+ > 插值
+ ```
+    INSTER INTO info VALUES (null, 'title', '/path', '0', '1', null)
  ```
