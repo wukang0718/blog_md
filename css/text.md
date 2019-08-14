@@ -8,3 +8,9 @@
     white-space: nowrap;
     text-overflow: ellipsis;
 ```
+
+# 使用css调整字间距
+
+```css
+	letter-spacing:15px;
+```
